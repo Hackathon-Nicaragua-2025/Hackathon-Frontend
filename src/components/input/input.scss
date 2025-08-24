@@ -1,0 +1,25 @@
+.form-group {
+  width: 80%;
+  margin: 0.8rem auto;
+
+  .form-control {
+    text-align: center;
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 1rem;
+    border-bottom: 2px solid #ccc;
+  }
+
+  .form-control:focus {
+    border-color: #242155;
+    box-shadow: none;
+  }
+
+  .is-invalid {
+    border-color: #ff0000;
+    box-shadow: none;
+  }
+}

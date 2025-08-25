@@ -6,7 +6,7 @@ interface InputCorpProps {
 
 export const InputCorp = ({ children, icon }: InputCorpProps) => {
   return (
-    <button className="flex items-center w-full gap-2 py-4 px-6 rounded-4xl border border-[#242155] text-[#242155] bg-white active:bg-[#183407] active:text-white">
+    <button className="flex items-center gap-8 p-2 rounded-4xl text-base border border-[#242155] text-[#242155] lg:text-3xl lg:border-none">
       {icon}
       {children}
     </button>

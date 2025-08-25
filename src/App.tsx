@@ -13,7 +13,7 @@ function App() {
   return (
     // Pantalla de Carga
     <Suspense fallback={
-      <div className="flex items-center justify-center w-[100vw] h-[100vh] bg-[#B9BCC5]">
+      <div className="flex items-center justify-center w-[100dvw] h-[100dvh] bg-white">
         <img className="w-1/2" src={iconNormal} alt="Icon Avify" />
       </div>
     }>

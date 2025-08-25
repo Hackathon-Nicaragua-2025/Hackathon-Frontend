@@ -34,7 +34,7 @@ class ErrorBoundary extends Component<ErrorProps, ErrorBoundaryState> {
   // Render
   render() {
     if (this.state.hasError) {
-      return <h2 className="flex items-center justify-center h-[50vh] text-2xl font-bold">Algo a Salido Mal...</h2>
+      return <h2 className="flex items-center justify-center h-[50vh] text-3xl font-bold">Algo a Salido Mal...</h2>
     }
 
     return this.props.children

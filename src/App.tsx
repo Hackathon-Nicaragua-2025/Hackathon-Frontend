@@ -14,7 +14,7 @@ function App() {
     // Pantalla de Carga
     <Suspense fallback={
       <div className="flex items-center justify-center w-[100dvw] h-[100dvh] bg-white">
-        <img className="w-1/2" src={iconNormal} alt="Icon Avify" />
+        <img className="w-1/2 lg:w-1/4" src={iconNormal} alt="Icon Avify" />
       </div>
     }>
       <Routes>

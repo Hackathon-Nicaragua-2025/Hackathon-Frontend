@@ -36,7 +36,7 @@ const Login = () => {
           {/* Form Login */}
           <CustomForm />
           {/* Link Register */}
-          <Link to={laptop ? "" : "/register"} className="block text-sm text-center mt-4 text-[#242155] md:text-lg md:mt-8 lg:text-base lg:mt-8">
+          <Link to={laptop ? "" : "/register"} className="block text-sm text-center mt-4 text-[#242155] md:text-lg md:mt-8 lg:text-base lg:mt-8 hover:underline">
             Or log in with a
             <span className="font-bold text-[#3F6C5E]"> social network</span>
           </Link>

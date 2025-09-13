@@ -8,18 +8,18 @@ import IconoNormal from "../assets/image/IconoNormal.svg";
 
 // Component NavBar
 export default function NavBar() {
-  const isMobile = useMediaQuery("(max-width: 768px)");
+  const isTablet = useMediaQuery("(max-width: 768px)");
 
   return (
     // Container
-    <div className="sticky top-0 z-50 flex justify-between items-center w-full py-4 px-8 bg-white">
+    <div className="sticky top-0 z-50 flex justify-between items-center w-full py-4 px-6 bg-white">
       {/* Logo */}
       <div className="flex items-center">
         <img src={IconoNormal} alt="Icono Avify" className="w-12" />
         <h1 className="ml-2 font-bold text-xl">Avify</h1>
       </div>
       {/* Nav */}
-      {isMobile ? '' : <Nav />}
+      {isTablet ? '' : <Nav />}
       {/* Login Button */}
       <Button
         label="Iniciar Sesión"

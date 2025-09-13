@@ -9,11 +9,12 @@ interface CarouselProps {
   elements: React.ReactNode[];
   className?: string;
   settings: {
-    autoplay?: boolean;
-    autoplaySpeed?: number;
-    infinite?: boolean;
-    rtl?: boolean;
-    speed?: number;
+    infinite: boolean,
+    speed: number,
+    slidesToShow: number,
+    slidesToScroll: number,
+    initialSlide: number,
+    rtl?: boolean,
     responsive?: {
       breakpoint: number;
       settings: {
@@ -28,9 +29,13 @@ interface CarouselProps {
 export default function Carrusel({ elements, className, settings }: CarouselProps) {
   return (
     <div className={className}>
-      <Slider {...settings}>
+      {/* Force re-init when settings impacting layout change */}
+      <Slider key={`${settings.slidesToShow}-${settings.slidesToScroll}`} {...settings}>
         {elements.map((element, index) => (
-          <div className="cursor-pointer px-8 hover:scale-125 transition duration-500 ease-in-out md:px-4" key={index}>
+          <div
+            className="cursor-pointer px-3 sm:px-4 md:px-6 transition duration-500 ease-in-out hover:scale-105 lg:px-8"
+            key={index}
+          >
             {element}
           </div>
         ))}

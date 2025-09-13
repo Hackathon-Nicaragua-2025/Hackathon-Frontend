@@ -9,7 +9,7 @@ import "./nav/nav.sass";
 // Component Nav
 export default function NavIcons() {
   return (
-    <div className="sticky bottom-0 flex justify-center gap-8 w-full p-4 bg-white">
+    <div className="fixed bottom-0 z-50 flex justify-center gap-8 w-full p-4 bg-white">
       <CustomLinks reference="/" className="text-2xl font-bold text-[#0D3C2F] hover:text-[#3F6C5E] hover:underline transition duration-500 ease-in-out" icon={<FaHome />} />
       <CustomLinks reference="/events" className="text-2xl font-bold text-[#0D3C2F] hover:text-[#3F6C5E] hover:underline transition duration-500 ease-in-out" icon={<FaCalendar />} />
       <CustomLinks reference="/education" className="text-2xl font-bold text-[#0D3C2F] hover:text-[#3F6C5E] hover:underline transition duration-500 ease-in-out" icon={<FaGraduationCap />} />

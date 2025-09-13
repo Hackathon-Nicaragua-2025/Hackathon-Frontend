@@ -40,14 +40,13 @@ const settingsAves = {
       }
     }
   ]
-} as const;
+};
 
 // Settings Reservas
 const settingsReservas = {
   autoplay: true,
   autoplaySpeed: 3000,
   infinite: true,
-  rtl: true,
   speed: 1000,
   responsive: [
     {
@@ -72,7 +71,7 @@ const settingsReservas = {
       }
     }
   ]
-} as const;
+};
 
 // Elements 
 const elements = [

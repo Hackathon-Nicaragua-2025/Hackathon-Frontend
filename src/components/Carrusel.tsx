@@ -9,12 +9,18 @@ interface CarouselProps {
   elements: React.ReactNode[];
   className?: string;
   settings: {
-    infinite: boolean;
-    speed: number;
-    slidesToShow: number;
-    slidesToScroll: number;
-    autoplay: boolean;
-    autoplaySpeed: number;
+    autoplay?: boolean;
+    autoplaySpeed?: number;
+    infinite?: boolean;
+    rtl?: boolean;
+    speed?: number;
+    responsive?: {
+      breakpoint: number;
+      settings: {
+        slidesToShow: number;
+        slidesToScroll: number;
+      };
+    }[];
   };
 }
 

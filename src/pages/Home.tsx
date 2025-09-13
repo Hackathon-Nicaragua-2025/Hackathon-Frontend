@@ -17,8 +17,24 @@ const settingsAves = {
   autoplaySpeed: 3000,
   infinite: true,
   speed: 1000,
-  slidesToShow: 1,
-  slidesToScroll: 1,
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  responsive: [
+    {
+      breakpoint: 450,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      }
+    },
+    {
+      breakpoint: 800,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+      }
+    },
+  ]
 } as const;
 
 // Settings Reservas
@@ -28,11 +44,23 @@ const settingsReservas = {
   infinite: true,
   rtl: true,
   speed: 1000,
-  slidesToShow: 1,
-  slidesToScroll: 1,
+  slidesToShow: 3,
+  slidesToScroll: 3,
   responsive: [
     {
-    }
+      breakpoint: 450,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      }
+    },
+    {
+      breakpoint: 800,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+      }
+    },
   ]
 } as const;
 
@@ -61,14 +89,14 @@ export default function Home() {
       </div>
       {/* Title */}
       <div>
-        <h2 className="m-14 text-sm text-center">
+        <h2 className="m-4 text-sm text-center md:m-8">
           Protegiendo las aves, cuidando la naturaleza. <br />
           Descubre, Aprende y Visita con responsabilidad. <br />
           <span className="font-bold">Naturaleza en Acción, ¡Se Parte Del Cambio!</span>
         </h2>
         {/* Text */}
-        <div className="flex items-center gap-8 mt-10 mx-4">
-          <div className="w-2/3">
+        <div className="flex items-center gap-8 mt-10 mx-4 md:mx-8 md:gap-16">
+          <div className="w-2/3 md:w-1/2">
             <p className="text-xs">
               Somos una comunidad dedicada a la conservation de aves y reservas naturales. Aquí encontraras información para aprender, cuidar y disfrutar de la naturaleza de forma segura.
             </p>
@@ -76,30 +104,30 @@ export default function Home() {
               Trabajamos para resguardar la riqueza avifaunistica de Nicaragua mediante programas de conservacion y monitoreo. Nuestro compromiso es preservar las especies en peligro, proteger sus habitas naturales y promover la reproduccion segura de las aves nativas y migratorias.
             </p>
           </div>
-          <div className="w-1/3">
+          <div className="w-1/3 md:w-1/2">
             <img src={MiniMagic} alt="Mini Magic" className="w-2/3" />
           </div>
         </div>
         {/* Text */}
-        <div className="flex items-center gap-8 mx-4 mt-10">
-          <img src={Senderismo} alt="Senderismo" className="w-1/3" />
+        <div className="flex items-center gap-8 mx-4 mt-10 md:mx-8 md:gap-16">
+          <img src={Senderismo} alt="Senderismo" className="w-1/3 md:w-1/2" />
           <p className="text-xs">
             Invitamos a los visitantes a disfrutar de la naturaleza de forma responsable. Fomentamos el turismo ecológico con practicas seguras y respetuosas: Mantener el silencio, no dejar basura, seguir senderos establecidos y valorar cada espacio como patrimonio nacional.
           </p>
         </div>
       </div>
       {/* Carrusel */}
-      <div className="mt-16">
+      <div className="mt-16 md:mt-24">
         <div>
-          <h2 className="font-bold text-center text-base mb-6">Aves de Nicaragua.</h2>
+          <h2 className="font-bold text-center text-base mb-6 md:text-lg">Aves de Nicaragua.</h2>
           <Carrusel elements={elements} settings={settingsAves} />
         </div>
         <div>
-          <h2 className="font-bold text-center text-base mt-16 mb-6">Reservas Naturales.</h2>
+          <h2 className="font-bold text-center text-base mt-16 mb-6 md:text-lg">Reservas Naturales.</h2>
           <Carrusel elements={elements} settings={settingsReservas} />
         </div>
       </div>
-      <p className="my-14 mx-8 italic font-light font-serif text-center text-sm text-[#0D3C2F]">
+      <p className="my-14 mx-8 italic font-light font-serif text-center text-sm text-[#0D3C2F] md:text-base md:mx-16 md:my-24 md:font-semibold">
         Con Avify, aprenderás que pequeños cambios generan un gran impacto. Desde respetar las reservas hasta apoyar iniciativas de conservación. Queremos inspirar a niños, jóvenes y adultos a convertirse en defensores de la biodiversidad y defensores activos de nuestro planeta.
       </p>
       {/* Footer */}

@@ -24,7 +24,7 @@ export default function Carrusel({ elements, className, settings }: CarouselProp
     <div className={className}>
       <Slider {...settings}>
         {elements.map((element, index) => (
-          <div className="cursor-pointer px-8 hover:scale-125 transition duration-500 ease-in-out" key={index}>
+          <div className="cursor-pointer px-8 hover:scale-125 transition duration-500 ease-in-out md:px-4" key={index}>
             {element}
           </div>
         ))}
